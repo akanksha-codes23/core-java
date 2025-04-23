@@ -1,0 +1,31 @@
+public class Cod {
+   
+
+
+    public static void main(String[] args) {
+        int num1 = 10, num2 = -20, num3 = 5;
+
+        // num1++ = 10 Post-increment: use current num1 (10), then increment 11
+        // --num2 = -21 Pre-decrement: decrement first, then use 
+        // ++num3 = 6 Pre-increment: increment first, then use
+        // --num3 = 5 Pre-decrement: decrement first, then use
+        // num2-- = -21 (then num2 becomes -22)
+        // num1 = 11 Already incremented earlier to 11
+        // num2 = -22 After post-decrement, num2 = -22
+        // num3 = 5 After all changes, num3 = 5
+        // So, result = 10 + (-21) + 6 - 5 + (-21) + 11 + (-22) + 5 = -37
+
+        int result = (num1++)     // 10, num1 becomes 11
+                    + (--num2)    // -21, num2 becomes -21
+                    + (++num3)    // 6, num3 becomes 6
+                    - (--num3)    // 5, num3 becomes 5
+                    + (num2--)    // -21, num2 becomes -22
+                    + num1        // 11
+                    + num2        // -22
+                    + num3;       // 5
+
+        System.out.println("Result = " + result); // Output: -37
+    }
+}
+
+
